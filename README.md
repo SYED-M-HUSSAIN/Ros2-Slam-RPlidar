@@ -25,13 +25,13 @@ source install/setup.bash
 
 ### 2.1 Install RPLidar ROS2 Package
 
-You'll need to install the `rplidar_ros` package, which contains the drivers to interface with the RPLidar A2/A3.
+You'll need to install the `sllidar_ros2` package, which contains the drivers to interface with the RPLidar A2/A3.
 
-1. Clone the `rplidar_ros` repository:
+1. Clone the `sllidar_ros2` repository:
 
 ```bash
 cd ~/ros2_ws/src
-git clone https://github.com/Slamtec/rplidar_ros.git
+git clone https://github.com/Slamtec/sllidar_ros2.git
 ```
 
 2. Build the workspace:
@@ -55,7 +55,7 @@ To ensure the RPLidar node is functioning correctly:
 1. Start the RPLidar node:
 
 ```bash
-ros2 launch rplidar_ros rplidar.launch.py
+ros2 launch sllidar_ros2 view_sllidar_a3_launch.py
 ```
 
 2. Confirm that scan data is being published:
