@@ -1,0 +1,6 @@
+[submodule "sllidar_ros2"]
+	path = sllidar_ros2
+	url = https://github.com/Slamtec/sllidar_ros2.git
+[submodule "turtlebot4"]
+	path = turtlebot4
+	url = https://github.com/turtlebot/turtlebot4.git
