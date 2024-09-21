@@ -2,6 +2,11 @@
 
 This guide walks you through the installation and execution of SLAM using the RPLidar A2/A3 on ROS2, leveraging the `rf2o_laser_odometry` and `turtlebot4` packages for odometry and visualization.
 
+![ROS Badge](https://img.shields.io/badge/ROS2-22314E?style=for-the-badge&logo=ROS&logoColor=white)
+![Robot Framework Badge](https://img.shields.io/badge/SLAMTEC%20Lidar-000000?style=for-the-badge&logo=robot-framework&logoColor=white)
+![ROS2 Humble](https://img.shields.io/badge/ROS2:Humble-0078D7?style=for-the-badge&logo=ros&logoColor=white)
+![Ubuntu 22.04](https://img.shields.io/badge/Ubuntu-22.04-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+
 ---
 
 ## Step 1: Install ROS2
@@ -187,6 +192,11 @@ If you get errors about missing transforms, ensure you have correctly published 
 
 By following these steps, you should have a complete SLAM system running with the RPLidar A2/A3, utilizing odometry and the Turtlebot4 package for navigation and visualization. This setup will allow you to map your environment in real-time and monitor the SLAM process visually.
 
-If you encounter any issues, refer to the troubleshooting steps or ROS2 logs for debugging.
+If you encounter any issues, refer to the troubleshooting steps or ROS2 logs for debugging, or raise the **Pull Request**.
 
 ---
+## Contributors
+
+![GitHub Contributors](https://img.shields.io/github/contributors/SYED-M-HUSSAIN/Ros2-Slam-RPlidar?style=for-the-badge)
+- [Syed Muhammad Hussain](https://github.com/SYED-M-HUSSAIN)  
+- [Sadiqah Mushtaq](https://github.com/SadiqahMushtaq)  
