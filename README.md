@@ -70,13 +70,18 @@ ros2 topic echo /scan
 
 Odometry is essential for accurate SLAM. Install the `rf2o_laser_odometry` package to calculate odometry using the LIDAR scan data.
 
-1. Install the package:
+1. Install and build the package:
 
 ```bash
-sudo apt install ros-<ros2-distro>-rf2o-laser-odometry
+cd ~/ros2_ws/src
+git clone https://github.com/MAPIRlab/rf2o_laser_odometry.git
 ```
+Now build the package using `colcon`:
 
-Replace `<ros2-distro>` with your ROS2 distribution (e.g., `humble`, `foxy`).
+```bash
+cd ~/ros2_ws
+colcon build --packages-select rf2o_laser_odometry
+```
 
 2. Start the odometry node:
 
@@ -122,12 +127,18 @@ sudo apt install ros-<ros2-distro>-turtlebot4*
 
 ### 5.2 Launch the SLAM Algorithm
 
-To launch the SLAM algorithm, run the following command, replacing the `/path/to/slam.yaml` with the actual path to your SLAM configuration file:
+First, you need to find the path to the `slam.yaml` file in your `turtlebot4_navigation` package. Run the following command to find the installation path of the `turtlebot4_navigation` package
+
+```bash
+ros2 pkg prefix turtlebot4_navigation
+```
+Navigate to the `config` directory within this package to locate the `slam.yaml` file. 
+
+Once you have the path to `slam.yaml`, you can lauch the the slam algorithm using the following command, replacing the `/path/to/slam.yaml` with the actual path to your SLAM configuration file:
 
 ```bash
 ros2 launch turtlebot4_navigation slam.launch.py params:=/full/path/to/slam.yaml
 ```
-
 This starts the SLAM process and allows you to map the environment using LIDAR data.
 
 ---
